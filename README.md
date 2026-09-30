@@ -4,8 +4,7 @@ Modul: Datenverarbeitungssysteme (DVS), IT24-1, Duale Hochschule Sachsen.
 
 ## Szenario
 
-Ein Wertstoffhandel betreibt zwei Annahmestellen. Eine auf dem Land in
-Grossenhain und eine in der Stadt Dresden. Die Kunden liefern dort Altmetall an
+Ein Wertstoffhandel betreibt zwei Annahmestellen. Eine auf dem Land (bspw. Grossenhain) und eine in der Stadt (bspw. Dresden). Die Kunden liefern dort Altmetall an
 und erhalten im Gegenzug eine Gutschrift nach Tagespreis. Das Material, welches gesammelt wurde,
 wird an ein drittes Werk gefahren und anschließend dort sortiert und verwertet.
 
@@ -41,8 +40,6 @@ Der Zugriff auf die Quelldatenbanken erfolgt ueber die Erweiterung
 `postgres_fdw`, sodass die gesamte Beladung in SQL bleibt.
 
 ## Ausfuehrungsreihenfolge
-
-Voraussetzung: PostgreSQL 16 oder neuer.
 
 ```
 createdb annahme
@@ -85,7 +82,7 @@ Im DWH: `fakt_ankauf` 948 Zeilen, `fakt_verwertung` 167 Zeilen.
 Die Beispieldaten werden ueber eine Hashfunktion erzeugt und sind damit bei
 jedem Aufbau identisch reproduzierbar.
 
-## Ergebnis
+## Ergebnis - Abfrage mit 09AuswertungBusinessdwh.sql im Ordner 03Auswertung
 
 | Standorttyp | Ankauf   | Preis     | Einsatz  | Ausbeute | Quote  |
 |-------------|----------|-----------|----------|----------|--------|
