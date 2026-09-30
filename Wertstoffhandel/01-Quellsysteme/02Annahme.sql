@@ -1,6 +1,6 @@
 -- Quellsystem 1: Annahmesystem - Beispieldaten
 -- Zeitraum: 01.10.2025 bis 31.12.2025 (4. Quartal)
--- Feste Werte, keine Berechnung. Voraussetzung: 01Annahme.sql wurde ausgefuehrt.
+-- vorher "01Annahme.sql" ausführen!!
 
 
 -- standort
