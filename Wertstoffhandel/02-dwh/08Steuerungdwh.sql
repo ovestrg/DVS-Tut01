@@ -1,9 +1,9 @@
 -- Data Warehouse: Steuerung der Beladung
--- Ein Aufruf laedt alle drei Schichten nacheinander und protokolliert das.
+-- Ein Aufruf lädt alle drei Schichten nacheinander und protokolliert das.
 
 CREATE SCHEMA IF NOT EXISTS meta;
 
--- Protokoll der Ladelaeufe
+-- Protokoll der Ladeläufe
 DROP TABLE IF EXISTS meta.etl_lauf;
 CREATE TABLE meta.etl_lauf (
     lauf_id   SERIAL PRIMARY KEY,
@@ -13,7 +13,7 @@ CREATE TABLE meta.etl_lauf (
     saetze    INTEGER,
     status    VARCHAR(10) NOT NULL);
 
--- Gesamtlauf: Staging, Core, Business
+-- Staging, Core, Business in einem
 CREATE OR REPLACE PROCEDURE meta.p_etl_gesamt()
 LANGUAGE plpgsql AS $$
 DECLARE
