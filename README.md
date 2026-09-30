@@ -9,26 +9,22 @@ Grossenhain und eine in der Stadt Dresden. Die Kunden liefern dort Altmetall an
 und erhalten im Gegenzug eine Gutschrift nach Tagespreis. Das Material, welches gesammelt wurde,
 wird an ein drittes Werk gefahren und anschließend dort sortiert und verwertet.
 
-Die beiden Bereiche arbeiten mit getrennten Anwendungen:
+Die beiden Bereiche nutzen folgende getrennte Anwendungen:
 
 * **Annahmesystem** (Datenbank `annahme`): Kunden, Anlieferungen, Materialarten,
   Preise, Gutschriften
 * **Verwertungssystem** (Datenbank `verwertung`): Werksanlieferungen, Chargen,
   Sortieranlagen, Ausbeute, Reststoff
 
-Die beiden Systeme sind über **Materialcode**, die
+Die beiden Systeme sind über den **Materialcode**, die
 **Containernummer** und den **Standortcode** verbunden.
 
 ## Fragestellungen
 
-1. Welches Material kaufen wir an welchem Standort in welcher Menge an, und was
-   zahlen wir dafuer?
-2. Wie viel vom angelieferten Material ist nach dem Sortieren noch verwertbar,
+1. Welches Material kaufen wir an welchem Standort in welcher Menge an und was
+   zahlen wir dafür?
+2. Wie viel vom angelieferten Material ist nach dem Sortieren noch verwertbar
    und wie unterscheidet sich das zwischen Land und Stadt?
-
-Die zweite Frage laesst sich in keinem der beiden Quellsysteme allein
-beantworten. Das Annahmesystem kennt den Ankaufspreis, aber nicht die Ausbeute.
-Das Verwertungssystem kennt die Ausbeute, aber weder Kunde noch Preis.
 
 ## Aufbau des Data Warehouse
 
