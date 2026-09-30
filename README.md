@@ -2,7 +2,7 @@
 
 Modul: Datenverarbeitungssysteme (DVS)
 
-Seminargruppe: IT24-1 
+Seminargruppe: 3IT24-1 
 
 Projektmitglieder: Ove Flatow (s3005538) und Linh Thu Nguyen (s3005651)
 
