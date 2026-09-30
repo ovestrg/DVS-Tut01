@@ -1,6 +1,9 @@
 # Data Warehouse Wertstoffhandel
 
-Modul: Datenverarbeitungssysteme (DVS), IT24-1, Duale Hochschule Sachsen. 
+Modul: Datenverarbeitungssysteme (DVS)
+Seminargruppe: IT24-1, Ove Flatow (s....) und Linh Thu Nguyen (s3005651)
+
+Duale Hochschule Sachsen. 
 
 ## Szenario
 
