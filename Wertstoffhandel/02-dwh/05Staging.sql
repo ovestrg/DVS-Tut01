@@ -1,11 +1,11 @@
 -- Data Warehouse, Schicht 1: Staging
 -- Datenbank: dwh
--- Aufgabe: unveraenderte Kopie der benoetigten Quelltabellen
+-- Aufgabe: unveränderte Kopie der benötigten Quelltabellen
 
 CREATE SCHEMA IF NOT EXISTS stage;
 
--- Zugriff auf die beiden Quelldatenbanken
--- postgres_fdw blendet fremde Tabellen so ein, als laegen sie hier.
+-- zugriff auf die beiden Quelldatenbanken
+-- postgres_fdw blendet virtualisiert fremde Tabellen
 CREATE EXTENSION IF NOT EXISTS postgres_fdw;
 
 DROP SERVER IF EXISTS srv_annahme CASCADE;
@@ -19,7 +19,7 @@ CREATE SERVER srv_verwertung FOREIGN DATA WRAPPER postgres_fdw
 CREATE USER MAPPING FOR CURRENT_USER SERVER srv_annahme    OPTIONS (user 'postgres');
 CREATE USER MAPPING FOR CURRENT_USER SERVER srv_verwertung OPTIONS (user 'postgres');
 
--- Die Quelltabellen werden in eigene Schemata eingeblendet
+-- Quelltabellen werden in eigene Schemata eingeblendet
 DROP SCHEMA IF EXISTS src_annahme CASCADE;
 DROP SCHEMA IF EXISTS src_verwertung CASCADE;
 CREATE SCHEMA src_annahme;
@@ -34,8 +34,7 @@ IMPORT FOREIGN SCHEMA public
               sortiervorgang, ausbeuteposition, reststoff)
     FROM SERVER srv_verwertung INTO src_verwertung;
 
--- Staging-Tabellen
--- Namen: an_ fuer das Annahmesystem, vw_ fuer das Verwertungssystem
+-- Staging Tabellen
 DROP TABLE IF EXISTS stage.an_standort, stage.an_kunde, stage.an_materialart,
                      stage.an_anlieferung, stage.an_anlieferungsposition,
                      stage.vw_stoffgruppe, stage.vw_sortieranlage,
@@ -188,5 +187,5 @@ BEGIN
 END;
 $$;
 
--- Beladung ausfuehren
+-- (Beladung) ausfuehren
 CALL stage.p_load_all();
