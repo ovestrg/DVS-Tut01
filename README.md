@@ -16,8 +16,8 @@ Die beiden Bereiche arbeiten mit getrennten Anwendungen:
 * **Verwertungssystem** (Datenbank `verwertung`): Werksanlieferungen, Chargen,
   Sortieranlagen, Ausbeute, Reststoff
 
-Verbunden sind beide Systeme ueber den **Materialcode**, die
-**Containernummer** und den **Standortcode**.
+Die beiden Systeme sind über **Materialcode**, die
+**Containernummer** und den **Standortcode** verbunden.
 
 ## Fragestellungen
 
