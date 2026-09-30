@@ -1,6 +1,6 @@
 -- Data Warehouse, Schicht 3: Business
--- Aufgabe: zwei Star Schemas fuer die Auswertung
--- Die fachlichen Schluessel werden durch kuenstliche Schluessel ersetzt.
+-- Aufgabe: zwei Star Schemas für die Auswertung
+-- Die fachlichen Schlüssel werden durch künstliche Schluessel ersetzt.
 
 CREATE SCHEMA IF NOT EXISTS business;
 
@@ -9,9 +9,8 @@ DROP TABLE IF EXISTS business.fakt_ankauf, business.fakt_verwertung,
                      business.dim_material, business.dim_kunde,
                      business.dim_anlage CASCADE;
 
--- Dimensionen
--- Jede Dimension hat einen kuenstlichen Schluessel (_sk) und behaelt den
--- fachlichen Schluessel als Ruecksprung ins Quellsystem.
+-- Dimensionen, jede davon hat eigenen küsntlicchen Schlüssel
+-- fachlichen Schlüssel für Rücksprung zum Quellsystem
 CREATE TABLE business.dim_zeit (
     zeit_sk        INTEGER PRIMARY KEY,
     datum          DATE NOT NULL UNIQUE,
@@ -84,7 +83,7 @@ BEGIN
     DELETE FROM business.dim_kunde;
     DELETE FROM business.dim_anlage;
 
-    -- Zeitschluessel im Format JJJJMMTT, die uebrigen fortlaufend nummeriert
+    -- Zeitschlüsssel, die übrigen sind fortlaufend nummeriert
     INSERT INTO business.dim_zeit
     SELECT to_char(datum,'YYYYMMDD')::int, datum, jahr, monat, monat_bez,
            monatsname, kalenderwoche, wochentagsname
@@ -110,7 +109,7 @@ BEGIN
            anlagenname, anlagentyp, kapazitaet_t_h
     FROM   core.dim_anlage;
 
-    -- Fakten: die fachlichen Schluessel werden gegen die _sk getauscht
+    -- Fakten: die fachlichen Schlüssel werden gegen die künstlichen Schlüssel getauscht
     INSERT INTO business.fakt_ankauf
     SELECT t.position_nr, z.zeit_sk, s.standort_sk, m.material_sk, k.kunde_sk,
            t.menge_kg, t.preis_je_t, t.ankaufswert_eur
