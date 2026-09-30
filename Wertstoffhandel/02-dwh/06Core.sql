@@ -1,7 +1,6 @@
 -- Data Warehouse, Schicht 2: Core
 -- Aufgabe: Daten beider Quellsysteme zusammenfuehren und bereinigen
--- Es wird noch mit den fachlichen Schluesseln gearbeitet
--- (Standortcode, Materialcode). Kuenstliche Schluessel folgen im Business.
+-- künstliche Schlüssel in business Schicht
 
 CREATE SCHEMA IF NOT EXISTS core;
 
