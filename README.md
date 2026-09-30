@@ -1,7 +1,6 @@
 # Data Warehouse Wertstoffhandel
 
-Beleg im Modul Datenverarbeitungssysteme, Berufsakademie Sachsen,
-Staatliche Studienakademie Dresden.
+Modul Datenverarbeitungssysteme (DVS), IT24-1, DSHN Sachsen. 
 
 ## Szenario
 
