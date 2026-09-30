@@ -32,11 +32,11 @@ gegliedert:
 
 | Schema     | Aufgabe                                              |
 |------------|------------------------------------------------------|
-| `stage`    | unveraenderte Kopie der benoetigten Quelltabellen    |
+| `stage`    | unveränderte Kopie der benötigten Quelltabellen    |
 | `core`     | Integration beider Systeme, Dimensionen, Topictabellen |
-| `business` | zwei Star Schemas mit kuenstlichen Schluesseln       |
+| `business` | zwei Star Schemas mit künstlichen Schlüsseln       |
 
-Der Zugriff auf die Quelldatenbanken erfolgt ueber die Erweiterung
+Der Zugriff auf die Quelldatenbanken erfolgt über die Erweiterung
 `postgres_fdw`, sodass die gesamte Beladung in SQL bleibt.
 
 ## Ausfuehrungsreihenfolge
@@ -79,7 +79,7 @@ Zeitraum der Beispieldaten: 01.10.2025 bis 31.12.2025.
 
 Im DWH: `fakt_ankauf` 948 Zeilen, `fakt_verwertung` 167 Zeilen.
 
-Die Beispieldaten werden ueber eine Hashfunktion erzeugt und sind damit bei
+Die Beispieldaten werden über eine Hashfunktion erzeugt und sind damit bei
 jedem Aufbau identisch reproduzierbar.
 
 ## Ergebnis - Abfrage mit 09AuswertungBusinessdwh.sql im Ordner 03Auswertung
@@ -89,8 +89,8 @@ jedem Aufbau identisch reproduzierbar.
 | Land        | 860,3 t  | 219 EUR/t | 523,5 t  | 388,2 t  | 74,2 % |
 | Stadt       | 142,9 t  | 1069 EUR/t|  73,0 t  |  63,2 t  | 86,6 % |
 
-Der günstige Ankaufspreis am Landstandort relativiert sich: Dort wird
-ueberwiegend Mischschrott angenommen, von dem rund ein Viertel als Reststoff
+Der günstige Ankaufspreis am Landstandort relativiert sich, weil dort
+überwiegend Mischschrott angenommen wird, von dem rund ein Viertel als Reststoff
 endet.
 
 ## Verzeichnisse
