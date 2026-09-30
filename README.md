@@ -1,13 +1,13 @@
 # Data Warehouse Wertstoffhandel
 
-Modul Datenverarbeitungssysteme (DVS), IT24-1, DSHN Sachsen. 
+Modul: Datenverarbeitungssysteme (DVS), IT24-1, Duale Hochschule Sachsen. 
 
 ## Szenario
 
-Ein Wertstoffhandel betreibt zwei Annahmestellen: eine auf dem Land in
-Grossenhain und eine in der Stadt Dresden. Kunden liefern dort Altmetall an
-und erhalten dafuer eine Gutschrift nach Tagespreis. Das gesammelte Material
-wird an ein drittes Werk gefahren, dort sortiert und verwertet.
+Ein Wertstoffhandel betreibt zwei Annahmestellen. Eine auf dem Land in
+Grossenhain und eine in der Stadt Dresden. Die Kunden liefern dort Altmetall an
+und erhalten im Gegenzug eine Gutschrift nach Tagespreis. Das Material, welches gesammelt wurde,
+wird an ein drittes Werk gefahren und anschließend dort sortiert und verwertet.
 
 Die beiden Bereiche arbeiten mit getrennten Anwendungen:
 
@@ -96,7 +96,7 @@ jedem Aufbau identisch reproduzierbar.
 | Land        | 860,3 t  | 219 EUR/t | 523,5 t  | 388,2 t  | 74,2 % |
 | Stadt       | 142,9 t  | 1069 EUR/t|  73,0 t  |  63,2 t  | 86,6 % |
 
-Der guenstige Ankaufspreis am Landstandort relativiert sich: Dort wird
+Der günstige Ankaufspreis am Landstandort relativiert sich: Dort wird
 ueberwiegend Mischschrott angenommen, von dem rund ein Viertel als Reststoff
 endet.
 
