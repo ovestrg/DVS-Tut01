@@ -4,7 +4,7 @@ Modul: Datenverarbeitungssysteme (DVS)
 
 Seminargruppe: IT24-1, Ove Flatow (s....) und Linh Thu Nguyen (s3005651)
 
-Duale Hochschule Sachsen. 
+Duale Hochschule Sachsen
 
 ## Szenario
 
