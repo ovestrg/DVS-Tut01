@@ -1,6 +1,6 @@
 -- Quellsystem 2: Verwertungssystem - Beispieldaten
--- Zeitraum: 01.10.2025 bis 31.12.2025 (4. Quartal)
--- Feste Werte, keine Berechnung. Voraussetzung: 03Verwertung.sql wurde ausgefuehrt.
+-- Zeitraum: 01.10.2025 bis 31.12.2025 
+-- vorher "03Verwertung.sql" ausführen
 
 
 -- stoffgruppe
